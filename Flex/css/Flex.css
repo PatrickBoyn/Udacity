@@ -1,0 +1,198 @@
+body{
+  margin:0; 
+  background:#d1cfb1;
+  font-family: 'Raleway', 
+  sans-serif;
+}
+/*headers*/
+header{ 
+  background:#003ea3;
+}
+h1,h2{
+  margin:0;
+  font-weight:lighter;
+  text-align:center;
+  color:white;
+}
+h2{
+  font-size:18px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+/*Text shadow as a border I did not come up with this
+  found it on a stack overflow question, 
+  I figured I'd mod it for my own purposes*/
+.test{
+  width:60%;
+  text-align:right;
+  text-shadow:
+  -1px -1px 0 black,
+  1px -1px 0 black,
+  -1px 1px 0 black,
+  1px 1px 0 black; 
+}
+.head1{ 
+  width:10%;
+}
+.head2{
+  align-self:center;
+  padding-right:2%;
+}
+.head3{ 
+  align-self:center;
+}
+.headcontainer{
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+}
+
+/*the navbar layout*/
+ul{
+  margin-top:0;
+  margin-bottom:0;
+  border-top:2px solid black;
+  border-bottom:2px solid black;
+  padding-left:2px;
+  list-style:none;
+  text-align:center;
+}
+li{ 
+  padding:0px 20px 1px 20px;
+}
+/*So the user knows they're 
+ over something clickable*/
+li:hover{
+  cursor:pointer;
+  background:#b71807;
+  color:white;
+}
+p{ 
+  margin:16px 20px;
+}
+/*I only wanted the main
+  header blue and white*/
+.noblue{ 
+  background:#d1cfb1; 
+  color:black;
+}
+/* the navbar */
+.navcontainer{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+/*creates a shadow effect 
+behind the images*/
+.shadow:hover{
+  cursor:pointer;
+  box-shadow:5px 5px 6px black;
+}
+.box1{ 
+  width:40%;
+}
+/*gallery box*/
+.box{
+  width:20%;
+  margin:2%;
+  align-self:center;
+  text-align:center;
+}
+/*gallery*/
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content:center;
+}
+/*If I do it the normal way without ordering the gallery is out of order
+  if you want to add another image, it must be redone every time I think
+  it's the same images that get jumbled each time I used positive numbers
+  because it's easier to see what is going on.*/
+/*media queries */
+@media screen and (max-width:320px){
+  body{ 
+    width:100%;
+}
+  /*Headers*/
+.head1{ 
+  align-self:center;
+}
+.head2{ 
+  text-align:center; 
+  padding-right:3%;
+}
+.head3{ 
+  text-align:center; 
+  padding-right:2%;
+}
+
+  /*nav bar*/
+.navcontainer{ 
+  display:flex;
+}
+.box1{ 
+  padding-right:15vw; 
+  align-items:flex-start;
+}
+.facebook{ 
+  padding-right:0;
+}
+li{ 
+  padding:2vw;
+}
+li:hover{ 
+  background:#b71807;
+}
+/*website gallery*/
+.gallery{
+  flex-direction:column;
+}
+/*gallery box*/
+.box{ 
+  width:50%;
+}
+}
+@media screen and (max-width:480px){
+  body{ 
+    width:100%;}
+
+  .head1{ 
+    width:20%;
+}
+  .navcontainer{ 
+    display:flex; 
+    flex-direction:column;
+}
+  .box1{ 
+    align-self:center;
+}
+  .gallery{
+    width:90%;
+}
+.box{ 
+  direction:column;
+}
+}
+@media screen and (max-width:360px){
+    body{
+    width:100%;
+  }
+  .navcontainer{ 
+    display:flex;
+}
+  .box1{ 
+    padding-right:15vw; align-items:flex-start;
+}
+  li{ 
+    padding:2vw;
+}
+  li:hover{
+  background:#b71807;
+  border:1px solid black;
+  }
+.box2{ 
+  padding-left:18%;
+}
+}
+
